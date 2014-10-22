@@ -18,7 +18,6 @@ public class MainActivity extends Activity {
 	 private ListView listView;   
 	    private ImageButton imgbt_sum;   
 	    private MyAdapter mMyAdapter;   
-	    
 	    private List<Map<String, Object>> listItems;   
 	    private Integer[] imgeIDs = {R.drawable.img1,    
 	            R.drawable.img2, R.drawable.img3,   
@@ -57,7 +56,7 @@ public class MainActivity extends Activity {
 	            map.put("image", imgeIDs[i]);               //图片资源   
 	            map.put("title", "物品名称：");              //物品标题   
 	            map.put("info", goodsNames[i]);     //物品名称   
-	            map.put("detail", goodsDetails[i]); //物品详情   
+	            map.put("detail", goodsDetails[i]);	//物品详情   
 	            listItems.add(map);   
 	        }      
 	        return listItems;   
@@ -70,7 +69,7 @@ public class MainActivity extends Activity {
 	            // TODO Auto-generated method stub   
 	            String goodsList = "";   
 	            for(int i = 0; i < listItems.size(); i++) {   
-	                goodsList += mMyAdapter.hasChecked(i)? goodsNames[i] + "  ": "";   
+	                goodsList += mMyAdapter.mCheckedItem[i]? goodsNames[i] + "  ": "";   
 	            }   
 	            new AlertDialog.Builder(MainActivity.this)   
 	            .setTitle("购物清单：")   
