@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>  
+ <LinearLayout xmlns:Android="http://schemas.android.com/apk/res/android"  
+    Android:orientation="vertical" 
+     Android:background="#FFC0CB"
+    Android:layout_width="fill_parent"  
+    Android:layout_height="fill_parent">  
+       
+    <!-- 结算 -->  
+    <LinearLayout Android:gravity="center_horizontal"  
+    Android:orientation="horizontal" 
+     Android:layout_width="fill_parent"  
+    Android:layout_height="wrap_content">  
+    <TextView Android:text="结算： "  
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content" 
+        Android:textColor="#ffffff"   
+        Android:textSize="20px"/>  
+    <ImageButton Android:id="@+id/imgbt_sum"    
+        Android:layout_width="40px"  
+        Android:layout_height="40px"  
+        Android:background="@drawable/beij" />  
+    </LinearLayout>  
+       
+    <TextView Android:text="商品列表： "  
+        Android:textColor="#ffffff"  
+        Android:layout_width="wrap_content"  
+        Android:layout_height="wrap_content"    
+      />  
+           
+    <!-- 商品列表 -->    
+    <ListView Android:id="@+id/list_goods"    
+        Android:layout_width="fill_parent"  
+        Android:layout_height="wrap_content" />  
+           
+ </LinearLayout>  
